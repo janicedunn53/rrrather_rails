@@ -3,7 +3,7 @@
 <ul>
   <% @questions.each do |question| %>
     <li>
-      <%= question.content %>
+      <%= link_to question.content, question_path(question) %>
 
         <ul>
           <% question.options.each do |option| %>
@@ -15,6 +15,7 @@
           <% end %>
         </ul>
         <br>
+
     </li>
   <% end %>
 </ul>
