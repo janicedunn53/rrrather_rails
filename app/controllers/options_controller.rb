@@ -17,7 +17,7 @@ class OptionsController < ApplicationController
   def upvote
     @option = Option.find(params[:id])
     @option.votes.create
-    redirect_to question_path(@option.question)
+    redirect_to questions_path(@questions)
   end
 
   private
