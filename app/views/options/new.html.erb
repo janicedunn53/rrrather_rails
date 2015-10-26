@@ -1,0 +1,8 @@
+<h1>Two Options</h1>
+
+<%= form_for [@question, @option] do |f| %>
+  <%= f.label :scenario %>
+  <%= f.text_area :scenario %>
+  <br>
+  <%= f.submit %>
+<% end %>

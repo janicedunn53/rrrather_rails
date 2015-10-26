@@ -1,0 +1,11 @@
+<h1><%= @question.content %></h1>
+
+<ul>
+  <% @question.options.each do |option| %>
+    <li><%= option.scenario %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Add options", new_question_option_path(@question) %></p>
+
+<p><%= link_to "Return to questions", questions_path %></p>
