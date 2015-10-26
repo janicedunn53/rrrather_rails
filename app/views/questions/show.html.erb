@@ -2,7 +2,11 @@
 
 <ul>
   <% @question.options.each do |option| %>
-    <li><%= option.scenario %></li>
+    <li>
+      <%= option.scenario %>
+      <%= pluralize(option.votes.count, "vote") %>
+      <%= button_to '+1', upvote_question_option_path(@question, option), method: :post %>
+    </li>
   <% end %>
 </ul>
 

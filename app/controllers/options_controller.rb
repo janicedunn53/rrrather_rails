@@ -14,6 +14,12 @@ class OptionsController < ApplicationController
     end
   end
 
+  def upvote
+    @option = Option.find(params[:id])
+    @option.votes.create
+    redirect_to question_path(@option.question)
+  end
+
   private
   def option_params
     params.require(:option).permit(:scenario)
