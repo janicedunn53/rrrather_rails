@@ -1,0 +1,3 @@
+$('#new_question').remove();
+$('#new_question_link').show();
+$('#question_list').append('<li><%= link_to @question.content, question_path(@question) %><br><%= link_to "Delete", question_path(@question), :data => {:confirm => "Are you sure?", :method => "delete"}, class: "btn btn-xs btn-danger" %></li>');
